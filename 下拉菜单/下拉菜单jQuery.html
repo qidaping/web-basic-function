@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>下拉菜单</title>
+	<style type="text/css">
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+		#nav{
+			height: 40px;
+			width: 600px;
+			margin:0 auto;
+			background-color: #eee;
+		}
+		ul{
+			list-style: none;
+			line-height: 40px;
+			text-align: center;
+		}
+		ul li{
+			float:left;
+		}
+		a {
+			text-decoration: none;
+			color:black;
+			display: block;	
+			width: 100px;
+		}
+		a:hover {
+			color:#fff;
+			background-color:#666;
+		}
+		ul li ul {
+			display: none;
+			list-style: none;
+		}
+		ul li ul li {
+			background-color:#eee;
+			float:none;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery-3.1.0.min.js"></script>
+	<script type="text/javascript">
+		
+			$(function(){
+				$(".navmeau").mouseover(function(){
+					$(this).children('ul').show();
+				})
+				$(".navmeau").mouseout(function(){
+					$(this).children('ul').hide();
+				})
+			})
+	</script>
+</head>
+<body>
+<div id="nav">
+<ul>
+	<li><a href="#">首页</a></li>
+	<li class="navmeau"><a href="#" >手机</a>
+ 		<ul class="ul2">
+			<li><a href="#">翻盖手机</a></li>
+			<li><a href="#">旋转手机</a></li>
+			<li><a href="#">主流手机</a></li>
+		</ul>
+	</li>
+	<li class="navmeau"><a href="#")">电视</a>
+		<ul>
+			<li><a href="#">智能电视</a></li>
+			<li><a href="#">台式电视</a></li>
+		</ul>
+	</li>
+	<li class="navmeau"><a href="#">路由器</a>
+		<ul>
+			<li><a href="#">路由器mini</a></li>
+			<li><a href="#">路由器穿墙王</a></li>
+		</ul>
+	</li>
+	<li class="navmeau"><a href="#">关于我们</a>
+		<ul>
+			<li><a href="#">公司</a></li>
+			<li><a href="#">大事件</a></li>
+			<li><a href="#">加入我们</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+</body>
+</html>
